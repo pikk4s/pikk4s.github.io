@@ -9,7 +9,7 @@
   --border: #232325;
   --border-hi: #3a3a3d;
   --text: #f2f2f2;
-  --muted: #8c8c90;
+  --muted: #a8a8ae;
   --radius: 18px;
 
   /* Plata cromada: bandas claras/oscuras como un metal pulido */
@@ -156,7 +156,7 @@ img { display: block; max-width: 100%; }
 }
 .portrait:hover img { filter: none; }
 
-.hero p { margin-top: 24px; font-weight: 300; font-size: clamp(16px, 1.6vw, 19px); color: var(--muted); max-width: 520px; }
+.hero p { margin-top: 24px; font-weight: 400; font-size: clamp(16px, 1.6vw, 19px); color: var(--muted); max-width: 520px; }
 .hero p strong { color: var(--text); font-weight: 400; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 
@@ -246,7 +246,7 @@ img { display: block; max-width: 100%; }
 .card-body { padding: 18px 20px 22px; }
 .client { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #b5b5ba; font-weight: 600; }
 .card h3 { font-size: 20px; margin-top: 6px; letter-spacing: -.01em; }
-.card p { color: var(--muted); font-size: 14px; margin-top: 4px; }
+.card p { color: #b8b8bd; font-size: 15px; margin-top: 6px; }
 
 .stats { display: flex; gap: 32px; margin-top: 14px; flex-wrap: wrap; }
 .stat b {
@@ -266,10 +266,10 @@ img { display: block; max-width: 100%; }
 .about { padding: 60px 0 120px; }
 .about-grid { display: grid; grid-template-columns: 1.15fr .7fr 1fr; gap: 28px; align-items: start; }
 .display { font-size: clamp(48px, 6.4vw, 92px); font-weight: 800; letter-spacing: -.045em; line-height: 1; padding-bottom: .06em; }
-.kicker { margin: 8px 0 26px; font-size: clamp(15px, 1.4vw, 18px); color: var(--muted); font-weight: 300; }
+.kicker { margin: 8px 0 26px; font-size: clamp(15px, 1.4vw, 18px); color: var(--muted); font-weight: 400; }
 .kicker strong { color: var(--text); font-weight: 600; }
 .about-text { padding: clamp(22px, 2.6vw, 34px); }
-.about-text p { font-size: 15.5px; font-weight: 300; color: #a3a3a8; margin-bottom: 16px; }
+.about-text p { font-size: 17px; font-weight: 400; color: #c9c9cd; line-height: 1.6; margin-bottom: 16px; }
 .about-text p:last-child { margin-bottom: 0; }
 .about-text strong { color: var(--text); font-weight: 500; }
 
@@ -286,7 +286,7 @@ img { display: block; max-width: 100%; }
 
 .about-right { text-align: right; }
 .skills { list-style: none; margin: 18px 0 30px; }
-.skills li { font-size: clamp(16px, 1.45vw, 19px); font-weight: 300; color: #d6d6d9; line-height: 1.55; }
+.skills li { font-size: clamp(16px, 1.45vw, 19px); font-weight: 400; color: #e4e4e7; line-height: 1.7; }
 .workspace { padding: 22px 22px 24px; text-align: center; }
 .workspace h3 { font-size: clamp(22px, 2.2vw, 30px); font-weight: 600; letter-spacing: -.02em; margin-bottom: 16px; }
 .tools { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
@@ -335,7 +335,7 @@ img { display: block; max-width: 100%; }
 .t-empty, .t-wave { display: flex; flex-direction: column; align-items: center; gap: 10px; }
 .t-empty svg, .t-wave svg { width: 64px; height: 64px; }
 .t-empty span { font-size: clamp(22px, 2.4vw, 34px); font-weight: 800; letter-spacing: -.03em; color: #ededef; }
-.t-card blockquote { font-size: 16px; font-weight: 300; color: #d0d0d3; line-height: 1.55; padding: 0 6px; }
+.t-card blockquote { font-size: 16px; font-weight: 400; color: #d0d0d3; line-height: 1.55; padding: 0 6px; }
 .t-who { margin-top: auto; padding: 0 6px 4px; display: flex; flex-direction: column; }
 .t-who b { font-weight: 600; }
 .t-who span { font-size: 13px; color: var(--muted); letter-spacing: .06em; }
@@ -354,6 +354,90 @@ footer .small { margin-top: 40px; font-size: 13px; color: var(--muted); }
 /* Animación al hacer scroll */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.in { opacity: 1; transform: none; }
+
+/* =========================================================
+   VIDRIO LÍQUIDO MONOCROMO
+   Superficies translúcidas con desenfoque, canto especular
+   (borde degradado) y un reflejo que sigue al ratón (--mx/--my,
+   lo actualiza main.js). Detrás hay luces grises suaves para
+   que el vidrio tenga algo que refractar.
+   ========================================================= */
+:root {
+  --glass-bg: linear-gradient(135deg, rgba(255,255,255,.11) 0%, rgba(255,255,255,.035) 40%, rgba(255,255,255,.02) 60%, rgba(255,255,255,.07) 100%);
+  --glass-edge: linear-gradient(135deg, rgba(255,255,255,.65) 0%, rgba(255,255,255,.12) 28%, rgba(255,255,255,.04) 55%, rgba(255,255,255,.1) 78%, rgba(255,255,255,.45) 100%);
+  --glass-shadow:
+    inset 0 1px 0 rgba(255,255,255,.28),
+    inset 0 -1px 0 rgba(255,255,255,.06),
+    inset 0 0 28px rgba(255,255,255,.035),
+    0 24px 60px rgba(0,0,0,.55);
+  --glass-blur: blur(22px) saturate(140%) brightness(1.08);
+}
+
+/* Luces ambientales (grises) detrás del vidrio */
+body::before {
+  content: ""; position: fixed; inset: -20%; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(30% 25% at 18% 30%, rgba(255,255,255,.075), transparent 70%),
+    radial-gradient(26% 22% at 82% 62%, rgba(255,255,255,.06), transparent 70%),
+    radial-gradient(34% 28% at 50% 92%, rgba(255,255,255,.05), transparent 70%);
+  filter: blur(10px);
+  animation: ambient 28s ease-in-out infinite alternate;
+}
+@keyframes ambient {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(4%, -3%, 0) scale(1.06); }
+  100% { transform: translate3d(-3%, 4%, 0) scale(1); }
+}
+
+/* Superficies de vidrio */
+.nav, .panel, .card, .t-card, .btn-metal, .tools li, .tags li, .t-media {
+  position: relative; isolation: isolate;
+  background: var(--glass-bg);
+  border: 1px solid transparent;
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
+}
+/* Canto especular: borde degradado claro arriba-izquierda y abajo-derecha */
+.nav::before, .panel::before, .card::before, .t-card::before, .btn-metal::before,
+.tools li::before, .tags li::before, .t-media::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px;
+  background: var(--glass-edge);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none; z-index: 2;
+}
+/* Reflejo líquido que sigue al puntero */
+.nav::after, .panel::after, .card::after, .t-card::after, .btn-metal::after, .tools li::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 1;
+  background: radial-gradient(260px circle at var(--mx, 25%) var(--my, -10%), rgba(255,255,255,.13), transparent 62%);
+  opacity: .7; transition: opacity .4s;
+}
+.nav:hover::after, .panel:hover::after, .card:hover::after, .t-card:hover::after,
+.btn-metal:hover::after, .tools li:hover::after { opacity: 1; }
+
+.nav { background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.04)); }
+.nav a { color: #c9c9ce; position: relative; z-index: 3; }
+.btn-metal { color: #fff; }
+.btn-metal:hover { background: linear-gradient(135deg, rgba(255,255,255,.18), rgba(255,255,255,.06)); }
+.card:hover, .t-card:hover { box-shadow: var(--glass-shadow), 0 0 0 1px rgba(255,255,255,.08); }
+.tags li { color: #e6e6e9; }
+
+/* Contenido por encima de los reflejos */
+.panel > *, .card > *, .t-card > *, .tools li > * { position: relative; z-index: 3; }
+
+/* Miniaturas: vidrio más oscuro dentro de la tarjeta */
+.thumb {
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.35));
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.t-media { background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)); box-shadow: inset 0 1px 0 rgba(255,255,255,.12); }
+.t-card { background: linear-gradient(160deg, rgba(255,255,255,.1), rgba(255,255,255,.03) 50%, rgba(255,255,255,.06)); }
+
+/* La tarjeta central conserva su canto prismático */
+.t-card.featured { background: linear-gradient(160deg, rgba(255,255,255,.1), rgba(255,255,255,.03) 50%, rgba(255,255,255,.06)); }
+.t-card.featured::before { background: var(--prism); opacity: .85; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {

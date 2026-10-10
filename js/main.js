@@ -63,3 +63,13 @@ const io = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
 }, { threshold: 0.12 });
 document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+// Vidrio líquido: el reflejo sigue al puntero dentro de cada superficie
+const glassSel = ".nav, .panel, .card, .t-card, .btn-metal, .tools li";
+document.addEventListener("pointermove", e => {
+  const el = e.target.closest && e.target.closest(glassSel);
+  if (!el) return;
+  const r = el.getBoundingClientRect();
+  el.style.setProperty("--mx", `${e.clientX - r.left}px`);
+  el.style.setProperty("--my", `${e.clientY - r.top}px`);
+}, { passive: true });
