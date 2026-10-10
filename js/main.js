@@ -29,6 +29,33 @@ document.getElementById("grid").innerHTML = projects.map(p => {
   </${tag}>`;
 }).join("");
 
+// Testimonios (audio / vídeo). Sin "src" se muestra un hueco "Próximamente".
+const T_ICON = {
+  audio: '<path d="M8 32h4M14 24v16M20 16v32M26 26v12M32 12v40M38 22v20M44 18v28M50 27v10M56 32h0"/>',
+  video: '<rect x="6" y="12" width="52" height="40" rx="9"/><path d="M27 23.5v17l14-8.5z"/>'
+};
+document.getElementById("testimonials").innerHTML = testimonials.map((t, i) => {
+  const kind = t.type === "video" ? "video" : "audio";
+  let media;
+  if (t.src && kind === "video") {
+    media = `<video src="${esc(t.src)}"${t.poster ? ` poster="${esc(t.poster)}"` : ""} controls preload="metadata" playsinline></video>`;
+  } else if (t.src) {
+    media = `<div class="t-wave"><svg viewBox="0 0 64 64" fill="none" stroke="url(#g-metal)" stroke-width="2" stroke-linecap="round" aria-hidden="true">${T_ICON.audio}</svg></div>
+      <audio src="${esc(t.src)}" controls preload="none"></audio>`;
+  } else {
+    media = `<div class="t-empty"><svg viewBox="0 0 64 64" fill="none" stroke="url(#${i === 1 ? "g-prism" : "g-metal"})" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${T_ICON[kind]}</svg>
+      <span>${kind === "video" ? "Vídeo" : "Audio"}</span></div>`;
+  }
+  const quote = t.quote ? `<blockquote>“${esc(t.quote)}”</blockquote>` : "";
+  const who = t.author
+    ? `<div class="t-who"><b>${esc(t.author)}</b>${t.role ? `<span>${esc(t.role)}</span>` : ""}</div>`
+    : `<div class="t-who"><span>${t.src ? "Testimonio" : "Próximamente"}</span></div>`;
+  return `<article class="t-card reveal${i === 1 ? " featured" : ""}">
+    <div class="t-media ${kind}">${media}</div>
+    ${quote}${who}
+  </article>`;
+}).join("");
+
 document.getElementById("year").textContent = new Date().getFullYear();
 
 // Aparición suave al hacer scroll

@@ -3,12 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pikk4s · Editor de vídeo</title>
-  <meta name="description" content="Pikk4s: editor de vídeo senior y dirección creativa para creadores de YouTube y marcas personales." />
+  <title>Pikk4s · Editor de vídeo senior y productor</title>
+  <meta name="description" content="Juan (Pikk4s): editor de vídeo senior y productor audiovisual para creadores y marcas que quieren comunicar mejor y crecer en redes sociales." />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="theme-color" content="#050505" />
+  <meta property="og:title" content="Pikk4s · Editor de vídeo senior y productor" />
+  <meta property="og:description" content="Produzco y edito vídeos para creadores y marcas que quieren comunicar mejor y crecer en redes sociales." />
+  <meta property="og:image" content="https://pikk4s.com/img/icon-512.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=859399cd" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=c6e065c5" />
 </head>
 <body>
 
@@ -34,16 +41,19 @@
     </defs>
   </svg>
 
-  <nav class="nav">
-    <a href="#" class="logo"><span class="metal-text">pikk4s</span><span class="dot"></span></a>
-    <a href="#proyectos" class="hide-sm">Servicios</a>
-    <a href="#sobre-mi" class="hide-sm">Sobre mí</a>
-    <a href="#contacto" class="cta">Hablemos</a>
-  </nav>
+  <header class="topbar">
+    <a href="#inicio" class="brand" aria-label="Pikk4s, ir al inicio"><span class="brand-logo"></span></a>
+    <nav class="nav">
+      <a href="#inicio" class="hide-sm">Inicio</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto" class="cta">Contacto</a>
+    </nav>
+  </header>
 
   <main>
     <!-- ================= HERO ================= -->
-    <div class="hero-shell">
+    <div class="hero-shell" id="inicio">
       <!-- Haz de luz prismático (único elemento de color fuerte de la portada) -->
       <svg class="light-ribbon" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
         <defs>
@@ -80,34 +90,88 @@
       </svg>
 
       <section class="wrap hero">
-        <div>
-          <div class="eyebrow">Pikk4s · Senior Video Editor · 100% remoto</div>
-          <div class="frame">
-            <span class="corner tl"></span><span class="corner tr"></span>
-            <span class="corner bl"></span><span class="corner br"></span>
-            <h1><span class="line metal-text">Edición que retiene.</span><span class="line soft">Criterio que se nota.</span></h1>
-          </div>
-          <p>Edición de vídeo, motion graphics, diseño sonoro y dirección creativa
-            <strong>para creadores de YouTube y marcas personales.</strong></p>
+        <!-- Retrato con marcas de encuadre -->
+        <figure class="portrait frame">
+          <span class="corner tl"></span><span class="corner tr"></span>
+          <span class="corner bl"></span><span class="corner br"></span>
+          <img src="img/juan-hero.webp" alt="Retrato de Juan, Pikk4s" width="733" height="858" />
+        </figure>
+
+        <div class="hero-copy">
+          <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
+          <h1><span class="light">Hola, soy</span> <span class="metal-text">Juan</span></h1>
+          <div class="role">Editor de vídeo senior <span class="sep"></span> Productor</div>
+          <p>Produzco y edito vídeos para creadores y marcas que quieren <strong>comunicar mejor,
+            conectar con su audiencia y crecer en redes sociales.</strong></p>
           <div class="actions">
-            <a href="#contacto" class="btn btn-prism">Hablemos →</a>
-            <a href="#proyectos" class="btn btn-metal">Ver servicios</a>
+            <a href="#proyectos" class="btn btn-metal">Proyectos</a>
+            <a href="#contacto" class="btn btn-prism">Contáctame →</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= SOBRE MÍ ================= -->
+    <section id="sobre-mi" class="wrap about">
+      <div class="about-grid">
+        <div class="about-left reveal">
+          <h2 class="display metal-text">Sobre mí</h2>
+          <p class="kicker">básicamente un <strong>obsesionado</strong> con lo que me gusta</p>
+          <div class="panel about-text">
+            <p>Mi nombre es Juan, soy <strong>editor de vídeo senior y productor audiovisual</strong>.
+              Me interesé por la industria audiovisual desde muy joven y, desde entonces, he participado
+              en una gran variedad de proyectos junto a marcas, creadores de contenido, deportistas y empresas.</p>
+            <p>Mi trayectoria comenzó formalmente como <strong>fotógrafo deportivo</strong>, una etapa en la
+              que desarrollé habilidades de colorización, composición y fotografía. Paralelamente participé
+              en producciones de bodas y celebraciones municipales, ampliando mi experiencia en distintos
+              formatos audiovisuales.</p>
+            <p>Con el tiempo me especialicé en <strong>edición de vídeo, animación, motion graphics y
+              storytelling</strong>. He colaborado con infoproductores, coaches, dueños de negocios,
+              médicos y empresas, desarrollando experiencia en distintas áreas de la postproducción y un
+              amplio dominio de la suite de Adobe.</p>
+            <p>Hoy cuento con equipos de alto rendimiento y estoy preparado para asumir producciones
+              audiovisuales que exijan estándares profesionales de calidad. También trabajo en la
+              <strong>dirección creativa y gestión de contenido</strong> para marcas personales,
+              ayudándolas a desarrollar una identidad visual coherente y una presencia digital sólida.</p>
           </div>
         </div>
 
-        <!-- Marca plana: estrella de 4 puntas con relleno metálico y canto prismático -->
-        <a href="#proyectos" class="mark-wrap" aria-label="Ir a servicios">
-          <svg class="mark" viewBox="0 0 200 200" aria-hidden="true">
-            <path d="M100 8 C 108 70 130 92 192 100 C 130 108 108 130 100 192 C 92 130 70 108 8 100 C 70 92 92 70 100 8 Z"
-              fill="url(#g-metal)" stroke="url(#g-prism)" stroke-width="2.5" stroke-linejoin="round" />
-            <path d="M100 46 C 104 84 116 96 154 100 C 116 104 104 116 100 154 C 96 116 84 104 46 100 C 84 96 96 84 100 46 Z"
-              fill="#0b0b0d" opacity=".9" />
-            <path d="M100 46 C 104 84 116 96 154 100" fill="none" stroke="url(#g-prism)" stroke-width="1.5" opacity=".9" />
-          </svg>
-          <span class="mark-label">Servicios</span>
-        </a>
-      </section>
-    </div>
+        <figure class="about-photo reveal" aria-hidden="true">
+          <img src="img/juan-about.webp" alt="" width="450" height="1045" loading="lazy" />
+        </figure>
+
+        <div class="about-right reveal">
+          <h2 class="display metal-text">Habilidades</h2>
+          <ul class="skills">
+            <li>Motion graphics y animación</li>
+            <li>Edición de vídeo</li>
+            <li>Dirección creativa</li>
+            <li>Narrativa audiovisual</li>
+            <li>Efectos visuales (VFX)</li>
+            <li>Colorización y corrección de color</li>
+            <li>Producción audiovisual</li>
+            <li>Estrategia de contenido</li>
+            <li>Postproducción audiovisual</li>
+            <li>Desarrollo de conceptos creativos</li>
+            <li>Composición visual</li>
+            <li>Fotografía</li>
+            <li>Optimización de contenido para redes sociales</li>
+          </ul>
+          <div class="panel workspace">
+            <h3>Mi espacio de trabajo</h3>
+            <ul class="tools">
+              <li title="Adobe Lightroom"><span>Lr</span></li>
+              <li title="Adobe Premiere Pro"><span>Pr</span></li>
+              <li title="Adobe After Effects"><span>Ae</span></li>
+              <li title="Adobe Photoshop"><span>Ps</span></li>
+              <li title="Slack"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3.5a1.75 1.75 0 1 0 0 3.5h1.75V5.25A1.75 1.75 0 0 0 9 3.5Zm0 4.75H4.5a1.75 1.75 0 1 0 0 3.5H9a1.75 1.75 0 1 0 0-3.5Zm11.5 1.75a1.75 1.75 0 1 0-3.5 0v1.75h1.75A1.75 1.75 0 0 0 20.5 10Zm-4.75 0V5.25a1.75 1.75 0 1 0-3.5 0V10a1.75 1.75 0 1 0 3.5 0ZM15 20.5a1.75 1.75 0 1 0 0-3.5h-1.75v1.75A1.75 1.75 0 0 0 15 20.5Zm0-4.75h4.5a1.75 1.75 0 1 0 0-3.5H15a1.75 1.75 0 1 0 0 3.5ZM3.5 14a1.75 1.75 0 1 0 3.5 0v-1.75H5.25A1.75 1.75 0 0 0 3.5 14Zm4.75 0v4.75a1.75 1.75 0 1 0 3.5 0V14a1.75 1.75 0 1 0-3.5 0Z"/></svg></li>
+              <li title="Artlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2.5 20h19L12 3Zm0 5.2 5.6 9.8H6.4L12 8.2Z"/></svg></li>
+              <li title="Notion"><span class="serif">N</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ================= PROYECTOS ================= -->
     <section id="proyectos" class="wrap projects">
@@ -118,45 +182,14 @@
       <div class="grid" id="grid"></div>
     </section>
 
-    <!-- ================= SOBRE MÍ ================= -->
-    <section id="sobre-mi" class="wrap about">
-      <div class="section-head reveal">
-        <h2 class="metal-text">Sobre mí.</h2>
+    <!-- ================= TESTIMONIOS ================= -->
+    <section id="testimonios" class="wrap testimonials">
+      <div class="center-head reveal">
+        <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
+        <h2 class="metal-text">Lo que dicen<br />mis clientes</h2>
+        <p class="label">Testimonios</p>
       </div>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p>Soy editor de vídeo autodidacta con <strong>más de cuatro años de experiencia</strong>
-            trabajando en remoto con creadores de contenido y marcas personales.</p>
-          <p>Mi enfoque une la ejecución técnica con el criterio creativo y estratégico:
-            que cada vídeo mantenga la atención, tenga una identidad propia y responda a
-            los objetivos de quien lo publica.</p>
-          <p>Además de editar, ayudo a definir formatos, sistemas visuales y calendarios de
-            contenido para que el canal crezca con coherencia.</p>
-        </div>
-        <div class="reveal">
-          <div class="about-block">
-            <h3>Trabajo con</h3>
-            <ul class="tags">
-              <li>Creadores de YouTube</li>
-              <li>Marcas personales</li>
-              <li>Emprendedores digitales</li>
-              <li>Mentores y formadores</li>
-              <li>Pódcast y entrevistas</li>
-              <li>Negocios en redes sociales</li>
-            </ul>
-          </div>
-          <div class="about-block">
-            <h3>Herramientas</h3>
-            <ul class="tags">
-              <li>Premiere Pro</li>
-              <li>After Effects</li>
-              <li>Photoshop</li>
-              <li>Lightroom</li>
-              <li>Notion</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <div class="t-grid" id="testimonials"></div>
     </section>
   </main>
 
@@ -164,10 +197,11 @@
   <footer id="contacto" class="wrap">
     <h2 class="metal-text">¿Tienes un proyecto en mente?</h2>
     <a href="mailto:pikk4s.dm@gmail.com" class="btn btn-prism">pikk4s.dm@gmail.com →</a>
-    <p class="small">© <span id="year"></span> Pikk4s · Editor de vídeo y dirección creativa.</p>
+    <p class="small">© <span id="year"></span> Pikk4s · Editor de vídeo senior y productor.</p>
   </footer>
 
   <script src="js/projects.js?v=c4242209"></script>
-  <script src="js/main.js?v=08087b28"></script>
+  <script src="js/testimonials.js?v=3a1cea03"></script>
+  <script src="js/main.js?v=af3f8775"></script>
 </body>
 </html>
