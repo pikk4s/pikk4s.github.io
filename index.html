@@ -8,12 +8,34 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=cf9b11b3" />
+  <link rel="stylesheet" href="css/styles.css?v=859399cd" />
 </head>
 <body>
 
+  <!-- Gradientes compartidos por los SVG (metal y prisma) -->
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="g-metal" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffffff" />
+        <stop offset=".3" stop-color="#d4d4d7" />
+        <stop offset=".52" stop-color="#7f7f85" />
+        <stop offset=".7" stop-color="#ececee" />
+        <stop offset="1" stop-color="#9a9aa0" />
+      </linearGradient>
+      <linearGradient id="g-prism" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#ff3d6e" />
+        <stop offset=".2" stop-color="#ffb347" />
+        <stop offset=".38" stop-color="#ffe45c" />
+        <stop offset=".55" stop-color="#4dffa6" />
+        <stop offset=".72" stop-color="#3cc8ff" />
+        <stop offset=".86" stop-color="#6a5cff" />
+        <stop offset="1" stop-color="#c45cff" />
+      </linearGradient>
+    </defs>
+  </svg>
+
   <nav class="nav">
-    <a href="#" class="logo">pikk4s.</a>
+    <a href="#" class="logo"><span class="metal-text">pikk4s</span><span class="dot"></span></a>
     <a href="#proyectos" class="hide-sm">Servicios</a>
     <a href="#sobre-mi" class="hide-sm">Sobre mí</a>
     <a href="#contacto" class="cta">Hablemos</a>
@@ -21,33 +43,76 @@
 
   <main>
     <!-- ================= HERO ================= -->
-    <section class="wrap hero">
-      <div>
-        <div class="eyebrow">Pikk4s · Senior Video Editor · 100% remoto</div>
-        <h1>Edición que retiene.<br /><span class="soft">Criterio que se nota.</span></h1>
-        <p>Edición de vídeo, motion graphics, diseño sonoro y dirección creativa
-          <strong>para creadores de YouTube y marcas personales.</strong></p>
-        <div class="actions">
-          <a href="#contacto" class="btn btn-primary">Hablemos →</a>
-          <a href="#proyectos" class="btn btn-ghost">Ver servicios</a>
-        </div>
-      </div>
+    <div class="hero-shell">
+      <!-- Haz de luz prismático (único elemento de color fuerte de la portada) -->
+      <svg class="light-ribbon" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="ribbon" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#3b2cff" />
+            <stop offset=".22" stop-color="#4d7dff" />
+            <stop offset=".42" stop-color="#ff3d6e" />
+            <stop offset=".55" stop-color="#ffb347" />
+            <stop offset=".64" stop-color="#c45cff" />
+            <stop offset=".82" stop-color="#6a5cff" />
+            <stop offset="1" stop-color="#3cf0ff" />
+          </linearGradient>
+          <linearGradient id="core" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fff" stop-opacity="0" />
+            <stop offset=".45" stop-color="#fff" stop-opacity=".9" />
+            <stop offset="1" stop-color="#fff" stop-opacity=".6" />
+          </linearGradient>
+          <radialGradient id="haze" cx=".48" cy=".75" r=".45">
+            <stop offset="0" stop-color="#ff2d55" stop-opacity=".28" />
+            <stop offset="1" stop-color="#ff2d55" stop-opacity="0" />
+          </radialGradient>
+          <filter id="blur-lg" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="22" /></filter>
+          <filter id="blur-sm" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="4" /></filter>
+        </defs>
+        <ellipse cx="690" cy="430" rx="520" ry="150" fill="url(#haze)" />
+        <g class="drift" fill="none" stroke-linecap="round">
+          <path d="M-60 520 C 400 470 900 400 1500 220" stroke="#3b4dff" stroke-width="1.2" opacity=".55" />
+          <path d="M-60 560 C 380 500 920 430 1500 260" stroke="#2a3bd6" stroke-width="1" opacity=".35" />
+          <path d="M-60 400 C 300 470 650 520 960 450 S 1360 250 1500 170" stroke="url(#ribbon)" stroke-width="44" opacity=".35" filter="url(#blur-lg)" />
+          <path d="M-60 400 C 300 470 650 520 960 450 S 1360 250 1500 170" stroke="url(#ribbon)" stroke-width="7" opacity=".85" filter="url(#blur-sm)" />
+          <path d="M-60 400 C 300 470 650 520 960 450 S 1360 250 1500 170" stroke="url(#ribbon)" stroke-width="2.5" />
+          <path d="M-60 400 C 300 470 650 520 960 450 S 1360 250 1500 170" stroke="url(#core)" stroke-width="1" />
+        </g>
+      </svg>
 
-      <a href="#proyectos" class="folder-wrap" aria-label="Ir a proyectos">
-        <div class="folder">
-          <div class="back"></div>
-          <div class="paper p2"></div>
-          <div class="paper"></div>
-          <div class="front"></div>
+      <section class="wrap hero">
+        <div>
+          <div class="eyebrow">Pikk4s · Senior Video Editor · 100% remoto</div>
+          <div class="frame">
+            <span class="corner tl"></span><span class="corner tr"></span>
+            <span class="corner bl"></span><span class="corner br"></span>
+            <h1><span class="line metal-text">Edición que retiene.</span><span class="line soft">Criterio que se nota.</span></h1>
+          </div>
+          <p>Edición de vídeo, motion graphics, diseño sonoro y dirección creativa
+            <strong>para creadores de YouTube y marcas personales.</strong></p>
+          <div class="actions">
+            <a href="#contacto" class="btn btn-prism">Hablemos →</a>
+            <a href="#proyectos" class="btn btn-metal">Ver servicios</a>
+          </div>
         </div>
-        <span class="folder-label">Servicios</span>
-      </a>
-    </section>
+
+        <!-- Marca plana: estrella de 4 puntas con relleno metálico y canto prismático -->
+        <a href="#proyectos" class="mark-wrap" aria-label="Ir a servicios">
+          <svg class="mark" viewBox="0 0 200 200" aria-hidden="true">
+            <path d="M100 8 C 108 70 130 92 192 100 C 130 108 108 130 100 192 C 92 130 70 108 8 100 C 70 92 92 70 100 8 Z"
+              fill="url(#g-metal)" stroke="url(#g-prism)" stroke-width="2.5" stroke-linejoin="round" />
+            <path d="M100 46 C 104 84 116 96 154 100 C 116 104 104 116 100 154 C 96 116 84 104 46 100 C 84 96 96 84 100 46 Z"
+              fill="#0b0b0d" opacity=".9" />
+            <path d="M100 46 C 104 84 116 96 154 100" fill="none" stroke="url(#g-prism)" stroke-width="1.5" opacity=".9" />
+          </svg>
+          <span class="mark-label">Servicios</span>
+        </a>
+      </section>
+    </div>
 
     <!-- ================= PROYECTOS ================= -->
     <section id="proyectos" class="wrap projects">
       <div class="section-head reveal">
-        <h2>Lo que hago.</h2>
+        <h2 class="metal-text">Lo que hago.</h2>
         <p>Del montaje al acabado final: cada pieza con una identidad visual coherente y pensada para su plataforma.</p>
       </div>
       <div class="grid" id="grid"></div>
@@ -56,7 +121,7 @@
     <!-- ================= SOBRE MÍ ================= -->
     <section id="sobre-mi" class="wrap about">
       <div class="section-head reveal">
-        <h2>Sobre mí.</h2>
+        <h2 class="metal-text">Sobre mí.</h2>
       </div>
       <div class="about-grid">
         <div class="about-text reveal">
@@ -97,12 +162,12 @@
 
   <!-- ================= CONTACTO ================= -->
   <footer id="contacto" class="wrap">
-    <h2>¿Tienes un proyecto en mente?</h2>
-    <a href="mailto:pikk4s.dm@gmail.com" class="btn btn-primary">pikk4s.dm@gmail.com →</a>
+    <h2 class="metal-text">¿Tienes un proyecto en mente?</h2>
+    <a href="mailto:pikk4s.dm@gmail.com" class="btn btn-prism">pikk4s.dm@gmail.com →</a>
     <p class="small">© <span id="year"></span> Pikk4s · Editor de vídeo y dirección creativa.</p>
   </footer>
 
-  <script src="js/projects.js?v=1c2143f9"></script>
-  <script src="js/main.js?v=c90e6e45"></script>
+  <script src="js/projects.js?v=c4242209"></script>
+  <script src="js/main.js?v=08087b28"></script>
 </body>
 </html>
